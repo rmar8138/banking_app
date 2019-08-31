@@ -34,20 +34,21 @@ while welcome_menu_open
     user_signed_up = false
 
     until user_signed_up
-      system("clear")
       puts "Please enter a username:"
-      # check if username exists in db
       username = gets.chomp
+      
+      # check if username exists in db
+      username_match = database.filter do |key, value|
+        value[:username] == username
+      end
 
-      # username_match = database.filter do |key, value|
-      #   value[:username] == username.to_sym
-      # end
+      if username_match.length != 0
+        system("clear")
+        puts "Username already exists, please try another one"
+        next
+      end
 
-      # if username_match.length != 0
-
-      #   next
-      # end
-
+      system("clear")
       puts "Please enter a password:"
       password = gets.chomp
 
