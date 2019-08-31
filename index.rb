@@ -1,4 +1,7 @@
+require_relative("./database")
 require_relative("./classes/User")
+
+p Database.return_database
 
 welcome_menu_open = true
 
