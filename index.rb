@@ -52,21 +52,30 @@ while welcome_menu_open
       puts "Please enter a password:"
       password = gets.chomp
 
-      puts "Would you like to deposit a starting balance? (y/n)"
-      deposit_starting_balance = gets.chomp
       user_selected_starting_balance = false
   
       until user_selected_starting_balance
+        puts "Would you like to deposit a starting balance? (y/n)"
+        deposit_starting_balance = gets.chomp
+
         case deposit_starting_balance
         when "y"
           puts "How much would you like to deposit?"
           starting_balance = gets.chomp.to_i
+
+          if starting_balance <= 0
+            system("clear")
+            puts "Invalid input"
+            next
+          end
+
           user_selected_starting_balance = true
         when "n"
           starting_balance = 0
           user_selected_starting_balance = true
         else
           puts "Invalid input"
+          next
         end
       end
 
