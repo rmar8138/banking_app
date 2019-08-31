@@ -14,7 +14,18 @@ while welcome_menu_open
   
   case input
   when "login"
-    puts "Logged in!"
+    user_logged_in = false
+
+    until user_logged_in
+      system "clear"
+      puts "Please enter your username:"
+      username = gets.chomp
+      # check if username exists in db
+
+      puts "Please enter your password:"
+      password = gets.chomp
+      # check if password matches user account 
+    end
   when "signup"
     user_signed_up = false
 
@@ -48,9 +59,8 @@ while welcome_menu_open
       user_signed_up = true
     end
 
-    p username
-    p password
-    p starting_balance
+    new_user = User.new(username, password, starting_balance)
+    p new_user
     welcome_menu_open = false
   when "exit"
     puts "Cya!"
