@@ -1,7 +1,8 @@
-require_relative("./database")
+require_relative("./database/database")
 require_relative("./classes/User")
 
-p Database.return_database
+# initialize database
+database = Database.return_database
 
 welcome_menu_open = true
 
@@ -20,7 +21,7 @@ while welcome_menu_open
     user_logged_in = false
 
     until user_logged_in
-      system "clear"
+      system("clear")
       puts "Please enter your username:"
       username = gets.chomp
       # check if username exists in db
@@ -33,10 +34,19 @@ while welcome_menu_open
     user_signed_up = false
 
     until user_signed_up
-      system "clear"
+      system("clear")
       puts "Please enter a username:"
       # check if username exists in db
       username = gets.chomp
+
+      # username_match = database.filter do |key, value|
+      #   value[:username] == username.to_sym
+      # end
+
+      # if username_match.length != 0
+
+      #   next
+      # end
 
       puts "Please enter a password:"
       password = gets.chomp
@@ -63,7 +73,10 @@ while welcome_menu_open
     end
 
     new_user = User.new(username, password, starting_balance)
-    p new_user
+    database[new_user.id.to_sym] = new_user.return_user
+    
+    Database.save_database(database)
+
     welcome_menu_open = false
   when "exit"
     puts "Cya!"
