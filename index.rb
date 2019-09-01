@@ -38,11 +38,8 @@ while welcome_menu_open
       username = gets.chomp
       
       # check if username exists in db
-      username_match = database.filter do |key, value|
-        value[:username] == username
-      end
 
-      if username_match.length != 0
+      if Database.username_exists?(username)
         system("clear")
         puts "Username already exists, please try another one"
         next
