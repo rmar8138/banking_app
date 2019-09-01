@@ -20,4 +20,12 @@ module Database
   
     username_match.length == 0 ? false : true
   end
+
+  def self.password_match?(username, password)
+    user = @database.filter do |key, value|
+      value[:username] == username
+    end
+
+    user.values[0][:password] == password ? true : false
+  end
 end

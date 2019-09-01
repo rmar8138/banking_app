@@ -1,1 +1,44 @@
-{"bf613ac0-ae05-0137-198c-701898071b2c":{"id":"bf613ac0-ae05-0137-198c-701898071b2c","username":"Ragan","password":"asdf","balance":1000,"history":[]},"1fdee9b0-ae06-0137-198d-701898071b2c":{"id":"1fdee9b0-ae06-0137-198d-701898071b2c","username":"Agnes","password":"asdf","balance":0,"history":[]},"0819ec00-ae07-0137-198e-701898071b2c":{"id":"0819ec00-ae07-0137-198e-701898071b2c","username":"Rowland","password":"asdf","balance":0,"history":[]},"b623b170-ae08-0137-1990-701898071b2c":{"id":"b623b170-ae08-0137-1990-701898071b2c","username":"asdf","password":"asdf","balance":100,"history":[]},"e8d34a20-ae08-0137-1991-701898071b2c":{"id":"e8d34a20-ae08-0137-1991-701898071b2c","username":"a","password":"a","balance":10,"history":[]}}
+{
+  "bf613ac0-ae05-0137-198c-701898071b2c": {
+    "id": "bf613ac0-ae05-0137-198c-701898071b2c",
+    "username": "Ragan",
+    "password": "asdf",
+    "balance": 1000,
+    "history": []
+  },
+  "1fdee9b0-ae06-0137-198d-701898071b2c": {
+    "id": "1fdee9b0-ae06-0137-198d-701898071b2c",
+    "username": "Agnes",
+    "password": "asdf",
+    "balance": 0,
+    "history": []
+  },
+  "0819ec00-ae07-0137-198e-701898071b2c": {
+    "id": "0819ec00-ae07-0137-198e-701898071b2c",
+    "username": "Rowland",
+    "password": "asdf",
+    "balance": 0,
+    "history": []
+  },
+  "b623b170-ae08-0137-1990-701898071b2c": {
+    "id": "b623b170-ae08-0137-1990-701898071b2c",
+    "username": "asdf",
+    "password": "asdf",
+    "balance": 100,
+    "history": []
+  },
+  "e8d34a20-ae08-0137-1991-701898071b2c": {
+    "id": "e8d34a20-ae08-0137-1991-701898071b2c",
+    "username": "a",
+    "password": "a",
+    "balance": 10,
+    "history": []
+  },
+  "24446cb0-ae93-0137-1992-701898071b2c": {
+    "id": "24446cb0-ae93-0137-1992-701898071b2c",
+    "username": "tester",
+    "password": "testing",
+    "balance": 0,
+    "history": []
+  }
+}

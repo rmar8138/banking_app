@@ -19,16 +19,31 @@ while welcome_menu_open
   case input
   when "login"
     user_logged_in = false
+    system("clear")
 
     until user_logged_in
-      system("clear")
       puts "Please enter your username:"
       username = gets.chomp
-      # check if username exists in db
+
+      # check if username doesn't exists in db
+      if !Database.username_exists?(username)
+        system("clear")
+        puts "Username doesn't exist"
+        next
+      end
 
       puts "Please enter your password:"
       password = gets.chomp
       # check if password matches user account 
+      if !Database.password_match?(username, password)
+        system("clear")
+        puts "Incorrect password"
+        next
+      end
+
+      user_logged_in = true
+      welcome_menu_open = false
+      puts "Logged in!"
     end
   when "signup"
     user_signed_up = false
